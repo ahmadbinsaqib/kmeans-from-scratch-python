@@ -22,22 +22,23 @@ This project focuses on the core K-Means loop: **initial centroid selection**, *
 
 K-Means repeatedly performs two steps:
 
-### 1. Assignment Step
+## 1. Assignment Step
+
 For each data point, the squared distance to each centroid is computed:
 
-\[
+$$
 d^2 = (C_x - x)^2 + (C_y - y)^2
-\]
+$$
 
-The point is assigned to the cluster with the **smallest distance**.
+The point is assigned to the cluster with the smallest distance.
 
-### 2. Update Step
-For each cluster, the centroid is recomputed as the **mean** of all points assigned to that cluster:
+## 2. Update Step
 
-\[
-\mu_x = \frac{\sum x}{\text{count}}, \quad
-\mu_y = \frac{\sum y}{\text{count}}
-\]
+For each cluster, the centroid is recomputed as the mean of all points assigned to that cluster:
+
+$$
+\mu_x = \frac{\sum x}{\text{count}}, \quad \mu_y = \frac{\sum y}{\text{count}}
+$$
 
 The new centroid replaces the old one, and the process repeats.
 
